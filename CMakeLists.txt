@@ -5,8 +5,7 @@ include(CTest)
 enable_testing()
 
 add_executable(HelloWorld ./src/main.cpp)
-target_link_libraries(HelloWorld liblibStatic.a pthread.so dl.so)
-
+install(TARGETS HelloWorld DESTINATION bin)
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
